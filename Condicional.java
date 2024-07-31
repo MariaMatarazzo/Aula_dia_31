@@ -6,13 +6,20 @@ public class Condicional {
 		// TODO Auto-generated method stub
 		
 		Scanner ler= new Scanner (System.in);
-		double x;
+		double x = 0;
 		
 		try {
 		System.out.print("Digite uma nota: ");
 		x= ler.nextDouble();
+		}
 		
-		if (x>= 6)
+		catch (Exception erro) {
+			System.out.println("Adicione valores positivos");
+			}
+		ler.close();
+
+		
+		if (x >= 6)
 			System.out.println ("Voce esta aprovado");
 		
 		else if (x<6 && x>=4)
@@ -21,11 +28,7 @@ public class Condicional {
 			System.out.println("REPROVADO");
 		}
 	
-		catch (Exception erro) {
-			System.out.println("Não axiste divisão por zero");
-			}
-		ler.close();
-
+		
 	}
 
-}
+
